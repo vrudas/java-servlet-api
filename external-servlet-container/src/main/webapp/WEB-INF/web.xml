@@ -14,4 +14,16 @@
         <url-pattern>/hello-servlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>LifecycleServlet</servlet-name>
+        <servlet-class>io.servlet.examples.example_01_lifecycle.LifecycleServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LifecycleServlet</servlet-name>
+        <url-pattern>/lifecycle-servlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
