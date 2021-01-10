@@ -23,3 +23,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task explodedWar(type: Copy) {
+    into "$buildDir/libs/exploded/${war.archiveFileName.get()}"
+    with war
+}
+
+war.dependsOn explodedWar
