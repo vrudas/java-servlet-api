@@ -25,5 +25,14 @@
         <url-pattern>/lifecycle-servlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GamesPricesServlet</servlet-name>
+        <servlet-class>io.servlet.examples.example_02_request_response.GamesPricesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GamesPricesServlet</servlet-name>
+        <url-pattern>/games</url-pattern>
+    </servlet-mapping>
 
 </web-app>
