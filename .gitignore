@@ -12,7 +12,7 @@
 
 # IntelliJ
 out/
-.idea
+.idea/
 
 ### Gradle template
 .gradle
