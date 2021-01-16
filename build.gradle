@@ -1,6 +1,7 @@
 group 'io.servlet'
 
 ext.slf4jVersion = '1.7.30'
+ext.servletApiVersion = "4.0.1"
 
 wrapper {
     gradleVersion = "6.7.1"
