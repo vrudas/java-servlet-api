@@ -18,7 +18,7 @@ public class ErrorHandlerServlet extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(ErrorHandlerServlet.class);
 
     @Override
-    protected void doGet(
+    protected void service(
         HttpServletRequest httpServletRequest,
         HttpServletResponse response
     ) {
