@@ -1,10 +1,10 @@
 plugins {
-    id 'java'
-    id 'war'
+    id "java"
+    id "war"
 }
 
-group 'io.servlet.external'
-version '1.0-SNAPSHOT'
+group "io.servlet.external"
+version "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -13,11 +13,11 @@ repositories {
 dependencies {
     providedCompile("javax.servlet:javax.servlet-api:${servletApiVersion}")
 
-    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
-    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
+    implementation("org.slf4j:slf4j-api:${slf4jVersion}")
+    implementation("org.slf4j:slf4j-simple:${slf4jVersion}")
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
 test {
