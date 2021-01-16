@@ -1,3 +1,4 @@
 rootProject.name = "java-servlet-api"
 
 include("external-servlet-container")
+include("embedded-servlet-container")

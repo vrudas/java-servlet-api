@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.bmuschko:gradle-tomcat-plugin:2.5"
+    }
+}
+
+plugins {
+    id "java"
+}
+
+apply plugin: "com.bmuschko.tomcat"
+
+group "io.servlet.embedded"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def tomcatVersion = "9.0.1"
+
+    tomcat("org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}")
+    tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}")
+
+    providedCompile("javax.servlet:javax.servlet-api:${servletApiVersion}")
+    providedCompile("javax.servlet.jsp:jsp-api:2.2")
+
+    implementation("org.slf4j:slf4j-api:${slf4jVersion}")
+    implementation("org.slf4j:slf4j-simple:${slf4jVersion}")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
+
+tomcat {
+    httpProtocol = "org.apache.coyote.http11.Http11Nio2Protocol"
+    ajpProtocol = "org.apache.coyote.ajp.AjpNio2Protocol"
+}
+
+test {
+    useJUnitPlatform()
+}
