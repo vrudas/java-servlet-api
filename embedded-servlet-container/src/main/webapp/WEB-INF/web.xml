@@ -4,6 +4,20 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+<!--  Filter ordering works only via XML config  -->
+<!--
+    <filter>
+        <filter-name>RequestLoggingFilter</filter-name>
+        <filter-class>io.servlet.examples.example_04_filter.RequestLoggingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>RequestLoggingFilter</filter-name> &lt;!&ndash; mandatory &ndash;&gt;
+        <url-pattern>/*</url-pattern> &lt;!&ndash; either url-pattern or servlet-name is mandatory &ndash;&gt;
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+-->
+
     <error-page>
         <location>/error-handler</location>
     </error-page>
