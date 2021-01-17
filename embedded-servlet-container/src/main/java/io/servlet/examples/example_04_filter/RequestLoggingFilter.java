@@ -30,8 +30,10 @@ public class RequestLoggingFilter implements Filter {
         var response = (HttpServletResponse) res;
 
         logger.info("User IP address: {}", request.getRemoteAddr());
+        logger.info("Request URI: {}", request.getRequestURI());
         logger.info("Request Method: {}", request.getMethod());
         logger.info("Request Params: {}", Collections.list(request.getParameterNames()));
+        logger.info("");
 
         //Example with missing chain.doFilter(...) call
         chain.doFilter(request, response);
