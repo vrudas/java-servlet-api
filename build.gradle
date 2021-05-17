@@ -2,7 +2,7 @@ group "io.servlet"
 
 ext.slf4jVersion = "1.7.30"
 ext.servletApiVersion = "4.0.1"
-ext.junitJupiterVersion = "5.7.1"
+ext.junitJupiterVersion = "5.7.2"
 
 wrapper {
     gradleVersion = "6.7.1"
