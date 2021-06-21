@@ -1,6 +1,6 @@
 group "io.servlet"
 
-ext.slf4jVersion = "1.7.30"
+ext.slf4jVersion = "1.7.31"
 ext.servletApiVersion = "4.0.1"
 ext.junitJupiterVersion = "5.7.2"
 
