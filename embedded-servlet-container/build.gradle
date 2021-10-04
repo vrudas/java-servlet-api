@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    def tomcatVersion = "10.0.11"
+    def tomcatVersion = "10.0.12"
 
     tomcat("org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}")
     tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}")
